@@ -1,0 +1,22 @@
+{
+  "Records": [
+    {
+      "EventSource": "aws:sns",
+      "EventVersion": "1.0",
+      "EventSubscriptionArn": "arn:aws:sns:us-west-2:919767229200:bounce:8ad76139-e1f7-45a4-9f60-549b1ce13f9d",
+      "Sns": {
+        "Type": "Notification",
+        "MessageId": "d1ce1905-8bc5-59ed-b7cb-43acace668c5",
+        "TopicArn": "arn:aws:sns:us-west-2:919767229200:bounce",
+        "Subject": null,
+        "Message": "{\n       \"notificationType\":\"Bounce\",\n       \"bounce\":{\n          \"bounceType\":\"Permanent\",\n          \"reportingMTA\":\"dns; email.example.com\",\n          \"bouncedRecipients\":[\n             {\n                \"emailAddress\":\"jane@example.com\",\n                \"status\":\"5.1.1\",\n                \"action\":\"failed\",\n                \"diagnosticCode\":\"smtp; 550 5.1.1 <jane@example.com>... User\"\n             }\n          ],\n          \"bounceSubType\":\"General\",\n          \"timestamp\":\"2016-01-27T14:59:38.237Z\",\n          \"feedbackId\":\"00000138111222aa-33322211-cccc-cccc-cccc-ddddaaaa068a-000000\",\n          \"remoteMtaIp\":\"127.0.2.0\"\n       },\n       \"mail\":{\n          \"timestamp\":\"2016-01-27T14:59:38.237Z\",\n          \"source\":\"john@example.com\",\n          \"sourceArn\": \"arn:aws:ses:us-east-1:888888888888:identity/example.com\",\n          \"sourceIp\": \"127.0.3.0\",\n          \"sendingAccountId\":\"123456789012\",\n          \"messageId\":\"00000138111222aa-33322211-cccc-cccc-cccc-ddddaaaa0680-000000\",\n          \"destination\":[\n            \"jane@example.com\",\n            \"mary@example.com\",\n            \"richard@example.com\"],\n          \"headersTruncated\":false,\n          \"headers\":[ \n           { \n             \"name\":\"From\",\n             \"value\":\"\\\"John Doe\\\" <john@example.com>\"\n           },\n           { \n             \"name\":\"To\",\n             \"value\":\"\\\"Jane Doe\\\" <jane@example.com>, \\\"Mary Doe\\\" <mary@example.com>, \\\"Richard Doe\\\" <richard@example.com>\"\n           },\n           { \n             \"name\":\"Message-ID\",\n             \"value\":\"custom-message-ID\"\n           },\n           { \n             \"name\":\"Subject\",\n             \"value\":\"Hello\"\n           },\n           { \n             \"name\":\"Content-Type\",\n             \"value\":\"text/plain; charset=\\\"UTF-8\\\"\"\n           },\n           { \n             \"name\":\"Content-Transfer-Encoding\",\n             \"value\":\"base64\"\n           },\n           { \n             \"name\":\"Date\",\n             \"value\":\"Wed, 27 Jan 2016 14:05:45 +0000\"\n           }\n          ],\n          \"commonHeaders\":{ \n             \"from\":[ \n                \"John Doe <john@example.com>\"\n             ],\n             \"date\":\"Wed, 27 Jan 2016 14:05:45 +0000\",\n             \"to\":[ \n                \"Jane Doe <jane@example.com>, Mary Doe <mary@example.com>, Richard Doe <richard@example.com>\"\n             ],\n             \"messageId\":\"custom-message-ID\",\n             \"subject\":\"Hello\"\n           }\n        }\n    }",
+        "Timestamp": "2022-03-17T11:20:03.972Z",
+        "SignatureVersion": "1",
+        "Signature": "MF9m+gTDvewEOvLwQftIpyhdDAxVPsyh9YM6Xur2KZU6LeZANrR05q6+20xeEC7KxPlVGSw/xM25AmNEN0Tmv2RSwaVoRLHvfCsVZbcXVxHE8l8B9pCb//g8/Gr9+LhH2CziYX1/Vv3fbWB+m/XQ0iS8eBpyLtmZ4GSzZr4shvyFBOnLwm0q5lWZfX8mY2XP5T7TlElLJTd98TNRYOPDys6CSvGIfX6CexBCT2F73zWmn79uviNVZtfcAEcXEzZQqRZso/uDcdVkvXZZToYUkg3IMbZjA/1D6VCP2aRWqv9xAeCIHQ3j+56j1z6T7mgS/Z/GzrDJu6LruH/i8DtLyw==",
+        "SigningCertUrl": "https://sns.us-west-2.amazonaws.com/SimpleNotificationService-7ff5318490ec183fbaddaa2a969abfda.pem",
+        "UnsubscribeUrl": "https://sns.us-west-2.amazonaws.com/?Action=Unsubscribe&SubscriptionArn=arn:aws:sns:us-west-2:919767229200:bounce:8ad76139-e1f7-45a4-9f60-549b1ce13f9d",
+        "MessageAttributes": {}
+      }
+    }
+  ]
+}
