@@ -2,7 +2,13 @@
 console.log('Loading event');
 
 let aws = require('aws-sdk');
-let dynamo = new aws.DynamoDB({params: {TableName: 'mailing'}});
+let dynamo = new aws.DynamoDB({
+  region: 'localhost',
+  endpoint: 'http://localhost:8000',
+  accessKeyId: 'local',  // needed if you don't have aws credentials at all in env
+  secretAccessKey: 'local',
+  params: {TableName: 'mailing'}
+});
 
 exports.handler = (event, context, callback) => {
   // console.log('Received event:', JSON.stringify(event, null, 2));
@@ -35,7 +41,7 @@ function handleBounce(message, callback) {
   console.log("Message " + messageId + " bounced when sending to " + addresses.join(", ") + ". Bounce type: " + bounceType);
 
   for (var i=0; i<addresses.length; i++){
-    writeDDB(addresses[i], message, "valid", callback);
+    writeDDB(addresses[i], message, "invalid", callback);
   }
 }
 
@@ -87,12 +93,12 @@ function writeDDB(email, payload, status, callback) {
 
   console.log(params);
   callback(null, 'success');
-  // dynamo.putItem(params,function(err,data){
-  //   if (err) {
-  //     console.log(err);
-  //     callback(err);
-  //   } else console.log(data); {
-  //     callback(null, '');
-  //   }
-  // });
+  dynamo.putItem(params,function(err,data){
+    if (err) {
+      console.log(err);
+      callback(err);
+    } else console.log(data); {
+      callback(null, '');
+    }
+  });
 }

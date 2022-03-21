@@ -11,6 +11,7 @@ This template demonstrates how to deploy a NodeJS function running on AWS Lambda
 serverless invoke local --function mailing --path data-bounce.json
 ```
 ## Refs
-https://github.com/serverless/examples/
-https://docs.aws.amazon.com/ko_kr/lambda/latest/dg/nodejs-handler.html
+https://github.com/serverless/examples/  
+https://docs.aws.amazon.com/ko_kr/lambda/latest/dg/nodejs-handler.html  
 https://docs.aws.amazon.com/ses/latest/dg/notification-examples.html
+

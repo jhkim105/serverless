@@ -9,3 +9,27 @@ provider:
 functions:
   mailing:
     handler: handler.handler
+
+plugins:
+#  - serverless-dynamodb-local
+  - serverless-offline
+
+#resources:
+#  Resources:
+#    usersTable:
+#      Type: AWS::DynamoDB::Table
+#      Properties:
+#        TableName: mailing
+#        AttributeDefinitions:
+#          - AttributeName: email
+#            AttributeType: S
+#        KeySchema:
+#          - AttributeName: email
+#            KeyType: HASH
+#        ProvisionedThroughput:
+#          ReadCapacityUnits: 1
+#          WriteCapacityUnits: 1
+
+
+
+
